@@ -1,0 +1,137 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body,#root{height:100%;font-family:cursive;}
+
+/* NORMAL BACKGROUND */
+
+.background{
+ height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ background:linear-gradient(135deg,#ffe6f2,#ffd1dc,#f3e8ff);
+}
+
+/* CARD */
+
+.card{
+ background:white;
+ padding:30px;
+ border-radius:15px;
+ text-align:center;
+ box-shadow:0 0 20px pink;
+}
+
+.btn{
+ margin-top:10px;
+ padding:10px 20px;
+ border:none;
+ background:hotpink;
+ color:white;
+ border-radius:20px;
+ cursor:pointer;
+}
+
+/* GALAXY BACKGROUND */
+
+.galaxyBackground{
+ height:100vh;
+ position:relative;
+ overflow:hidden;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ flex-direction:column;
+
+ background:
+ radial-gradient(circle at 30% 20%, #ff6ec4 0%, transparent 40%),
+ radial-gradient(circle at 80% 70%, #7873f5 0%, transparent 40%),
+ linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* STARS */
+
+.star{
+ position:absolute;
+ animation:starMove linear infinite;
+}
+
+@keyframes starMove{
+ from{transform:translateY(100vh);opacity:0;}
+ 50%{opacity:1;}
+ to{transform:translateY(-20vh);opacity:0;}
+}
+
+/* ORBIT HEART */
+
+.orbitContainer{position:relative;}
+
+.orbitHeart{
+ position:absolute;
+ font-size:30px;
+ animation:orbit 6s linear infinite;
+}
+
+@keyframes orbit{
+ from{transform:rotate(0deg) translateX(180px) rotate(0deg);}
+ to{transform:rotate(360deg) translateX(180px) rotate(-360deg);}
+}
+
+/* FINAL CARD */
+
+.finalGalaxyCard{
+ background:rgba(255,255,255,0.1);
+ backdrop-filter:blur(20px);
+ padding:40px;
+ border-radius:20px;
+ text-align:center;
+ color:white;
+ box-shadow:0 0 40px hotpink;
+}
+
+/* HEARTBEAT */
+
+.loveExplosion{
+ font-size:40px;
+ animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+ 0%{transform:scale(1);}
+ 50%{transform:scale(1.2);}
+ 100%{transform:scale(1);}
+}
+
+/* SECRET LETTER */
+
+.secretLetter{
+ position:fixed;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ background:white;
+ padding:25px;
+ border-radius:15px;
+ text-align:center;
+ box-shadow:0 0 30px hotpink;
+ color:#5a3e5b;
+}
+
+/* PARTY POPPERS */
+
+.popper{
+ position:fixed;
+ font-size:60px;
+ animation:popperBurst 1.2s ease forwards;
+}
+
+.topLeft{top:20px;left:20px;}
+.topRight{top:20px;right:20px;}
+.bottomLeft{bottom:20px;left:20px;}
+.bottomRight{bottom:20px;right:20px;}
+
+@keyframes popperBurst{
+ 0%{transform:scale(0);opacity:0;}
+ 50%{transform:scale(1.5);}
+ 100%{transform:scale(1);}
+}
